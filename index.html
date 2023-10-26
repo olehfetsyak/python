@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Run my PSI test</title>
+    </head>
+    <body>
+        <p id="result">PSI: 0</p>
+        <form>
+          <input id="temp" placeholder="Temperature">
+        </form>
+        <script>
+              document.getElementById('temp').addEventListener('input', () => {
+              	//psi = temperature * 0.193367271
+              	let c = parseInt( document.getElementById('temp').value);
+              	let PSI = c * 0.193367271;
+              	document.getElementById('result').innerHTML = 'PSI: ' + PSI;
+              });
+        </script>
+    </body>
+</html>
